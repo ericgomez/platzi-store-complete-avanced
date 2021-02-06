@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { ProductsService } from '../../../core/services/products/products.service'
-import { Product } from './../../../core/models/product.model'
+import { Product } from './../../../core/models/product.model';
 
 @Component({
   selector: 'app-product-detail',
@@ -72,6 +72,13 @@ product$!: Observable<Product>;
         console.error(error);
       }
     );
+  }
+
+  getFile() {
+    this.productsService.getFile()
+      .subscribe(content => {
+        console.log(content);
+      });
   }
 
 }

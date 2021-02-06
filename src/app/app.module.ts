@@ -18,6 +18,8 @@ import { environment } from '../environments/environment';
 import * as Sentry from '@sentry/angular';
 import { Integrations } from '@sentry/tracing';
 
+
+
 Sentry.init({
   dsn: 'https://605cb64cd61a49cea3d7bcf29e003e05@o517791.ingest.sentry.io/5626036',
   integrations: [
