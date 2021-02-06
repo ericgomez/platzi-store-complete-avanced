@@ -7,6 +7,7 @@ import { environment } from './../../../../environments/environment';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
+import * as Sentry from '@sentry/angular';
 interface User {
   email: string;
   gender: string;
@@ -53,6 +54,7 @@ export class ProductsService {
 
   private handleError(error: HttpErrorResponse) {
     console.log(error);
+    Sentry.captureException(error);
     return throwError('Ups algo salio mal');
   }
 }
