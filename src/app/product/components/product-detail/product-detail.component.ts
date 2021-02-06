@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
+import * as FileSaver from 'file-saver';
+
 import { Observable } from 'rxjs';
 
 import { switchMap } from 'rxjs/operators';
@@ -76,9 +78,11 @@ product$!: Observable<Product>;
 
   getFile() {
     this.productsService.getFile()
-      .subscribe(content => {
-        console.log(content);
-      });
+    .subscribe(content => {
+      console.log(content);
+      const blob = new Blob([content], {type: 'text/plain;charset=utf-8'});
+      FileSaver.saveAs(blob, 'hello world.txt');
+    });
   }
 
 }
