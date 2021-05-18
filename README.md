@@ -1,4 +1,11 @@
-# PlatziStoreComplete
+# Clases del Curso Profesional de Angular
+#### Proyecto del curso
+
+![proyect](https://static.platzi.com/media/landing-projects/proyecto-angular-profesional.gif)
+
+## Platzi Shop - Implementación
+
+Implementa el proyecto Platzi Shop. Aplica los patrones de Smart and Dumb Components para crear tu propia aplicación web.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
